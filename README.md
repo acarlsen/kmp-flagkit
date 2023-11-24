@@ -32,7 +32,7 @@ repositories {
 Put in your dependencies block:
 
 ```kotlin
-implementation("dev.carlsen.flagkit:flagkit:1.0")
+implementation("dev.carlsen.flagkit:flagkit:1.0.0")
 ```
 
 ## How to use
