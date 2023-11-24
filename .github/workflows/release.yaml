@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  release:
+
+    name: "Publish kmp-flagkit"
+    runs-on: macOS-latest
+    steps:
+
+      - name: "Checkout code"
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: "Set up JDK 17"
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: "Get release notes"
+        run: |
+          echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
+          echo "$(awk '/^## ${{ github.ref_name }}/{flag=1;next}/^## /{flag=0}flag' CHANGELOG.md)" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: "Set version for tag"
+        run: |
+          echo "ORG_GRADLE_PROJECT_VERSION_NAME=${{ github.ref_name }}" >> $GITHUB_ENV          
+
+      - name: "Deploy to Maven/Sonatype"
+        run: |
+          ./gradlew publish --stacktrace
+        env:
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_PASSWORD }}
+
+      - name: "Create Release"
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ env.RELEASE_NOTES }}
+        if: ${{ env.RELEASE_NOTES != '' }}

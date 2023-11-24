@@ -27,9 +27,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                compileOnly(compose.runtime)
-                compileOnly(compose.foundation)
-                compileOnly(compose.ui)
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.ui)
             }
         }
 
@@ -59,10 +59,10 @@ android {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.DEFAULT)
+    publishToMavenCentral(SonatypeHost.S01)
     signAllPublications()
 
-    coordinates("dev.carlsen.flagkit", "flagkit", "1.0-SNAPSHOT")
+    coordinates("dev.carlsen.flagkit", "flagkit", "1.0.0-SNAPSHOT")
 
     pom {
         name.set("kmp-flagkit")
