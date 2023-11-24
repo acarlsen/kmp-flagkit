@@ -1,5 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
-
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
@@ -55,31 +53,5 @@ android {
     }
     kotlin {
         jvmToolchain(17)
-    }
-}
-
-mavenPublishing {
-    publishToMavenCentral(SonatypeHost.S01)
-    signAllPublications()
-
-    coordinates("dev.carlsen.flagkit", "flagkit", "1.0.0-SNAPSHOT")
-
-    pom {
-        name.set("kmp-flagkit")
-        description.set("Flag icons in ImageVector format for Kotlin Multiplatform.")
-        inceptionYear.set("2023")
-        url.set("https://github.com/acarlsen/kmp-flagkit/")
-        licenses {
-            license {
-                name.set("The Apache License, Version 2.0")
-                url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-                distribution.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
-            }
-        }
-        scm {
-            url.set("https://github.com/acarlsen/kmp-flagkit/")
-            connection.set("scm:git:git://github.com/acarlsen/kmp-flagkit.git")
-            developerConnection.set("scm:git:ssh://git@github.com:acarlsen/kmp-flagkit.git")
-        }
     }
 }
