@@ -1,8 +1,8 @@
 # [kmp-flagkit](https://github.com/acarlsen/kmp-flagkit)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/acarlsen/kmp-flagkit/build.yml)
-![Maven Central](https://img.shields.io/maven-central/v/dev.carlsen.flagkit/flagkit)
+[![Maven Central](https://img.shields.io/maven-central/v/dev.carlsen.flagkit/flagkit)](https://central.sonatype.com/namespace/dev.carlsen.flagkit)
 [![Kotlin version](https://img.shields.io/badge/Kotlin-1.9.20-blueviolet?logo=kotlin&logoColor=white)](http://kotlinlang.org)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![badge][badge-jvm]
 ![badge][badge-android]
 ![badge][badge-ios]
@@ -11,7 +11,7 @@
 
 Flag icons in ImageVector format to use in Kotlin Multiplatform.
 
-With heavy inspiration from the [flagkit-android](https://github.com/murgupluoglu/flagkit-android) library.
+With heavy inspiration from the [FlagKit](https://github.com/madebybowtie/FlagKit) and [flagkit-android](https://github.com/murgupluoglu/flagkit-android) libraries.
 
 ## Platform Support
 - Android
