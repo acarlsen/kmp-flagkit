@@ -1,7 +1,7 @@
 # [kmp-flagkit](https://github.com/acarlsen/kmp-flagkit)
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/acarlsen/kmp-flagkit/build.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/dev.carlsen.flagkit/flagkit)](https://central.sonatype.com/namespace/dev.carlsen.flagkit)
-[![Kotlin version](https://img.shields.io/badge/Kotlin-1.9.20-blueviolet?logo=kotlin&logoColor=white)](http://kotlinlang.org)
+[![Kotlin version](https://img.shields.io/badge/Kotlin-2.0.20-blueviolet?logo=kotlin&logoColor=white)](http://kotlinlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![badge][badge-jvm]
 ![badge][badge-android]
