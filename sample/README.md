@@ -13,6 +13,11 @@ Run from Android Studio.
 ./gradlew :sample:run
 ```
 
+## Running Wasm (Web)
+```shell    
+./gradlew wasmBrowserDevelopmentRun --continuous 
+```
+
 ### Installing Android App
 ```shell
 ./gradlew :sample:installDebug

@@ -8,6 +8,7 @@
 ![badge][badge-ios]
 ![badge][badge-mac]
 ![badge][badge-js]
+![badge][badge-wasm]
 
 Flag icons in ImageVector format to use in Kotlin Multiplatform.
 
@@ -19,6 +20,7 @@ With heavy inspiration from the [FlagKit](https://github.com/madebybowtie/FlagKi
 - iOS
 - MacOS Native
 - Web (JSCanvas)
+- WebAssembly (Wasm)
 
 ## To use in your project
 
@@ -32,7 +34,7 @@ repositories {
 Put in your dependencies block:
 
 ```kotlin
-implementation("dev.carlsen.flagkit:flagkit:1.0.0")
+implementation("dev.carlsen.flagkit:flagkit:1.1.0")
 ```
 
 ## How to use
