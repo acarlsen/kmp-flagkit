@@ -54,7 +54,7 @@ There are also a few other flags available.
 
 
 ```kotlin
-Icon(
+Image(
     imageVector = FlagIcons.DK,
     contentDescription = "Denmark",
 )
