@@ -52,7 +52,7 @@ There are also a few other flags available.
 | Shetland         | GB-ZET  |
 | California       | US-CA   |
 
-
+### Use Flag directly
 ```kotlin
 Image(
     imageVector = FlagIcons.DK,
@@ -60,6 +60,13 @@ Image(
 )
 ```
 
+### Lookup flag by country code
+```kotlin
+Image(
+    imageVector = FlagKit.getFlag(countryCode = "DK"),
+    contentDescription = "Denmark",
+)
+```
 
 [badge-android]: http://img.shields.io/badge/android-6EDB8D.svg?style=flat
 
