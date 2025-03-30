@@ -86,7 +86,6 @@ kotlin {
 
 android {
     namespace = "dev.carlsen.flagkit.sample"
-    compileSdk = 34
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
