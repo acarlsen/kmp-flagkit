@@ -12,7 +12,7 @@ plugins {
 kotlin {
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "kmp-flagkit"
+        outputModuleName.set("kmp-flagkit")
         browser {
             val projectDirPath = project.projectDir.path
             commonWebpackConfig {
